@@ -1,1 +1,1 @@
-#this is Striver's A2z course
+#this is Striver's A2z DSA course
