@@ -279,13 +279,30 @@ public class MediumArray {
 //		System.out.println(pos);
 //		System.out.println(neg);	
 	}
-	
+	public static ArrayList<Integer> ElementsBySign(ArrayList<Integer> list){
+		int n = list.size();
+		
+		ArrayList<Integer> ans = new ArrayList<>(Collections.nCopies(n, 0));
+		 int posIndex = 0, negIndex = 1;
+	        for (int i = 0; i < n; i++) {
+	        	if(list.get(i) < 0) {
+	        		ans.set(negIndex, list.get(i));
+	        		negIndex += 2;
+	        	}
+	        	else {
+	        		ans.set(posIndex, list.get(i));
+	        		posIndex += 2;
+	        	}
+	        }
+		
+	        return ans;		
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(7,1,2,4,5,6,8));
-		int what = maximumProfit(arr);
-		System.out.println(what);
+		
+//		System.out.println(what);
 		
 //		int arr[] = {1,2,3,-3,-2,-1};
 //		
